@@ -53,7 +53,7 @@ export default (_, { mode }) => {
 			},
 			compress: true,
 			port: 8080,
-			statistic: false,
+			static: false,
 			watchFiles: [ "./src/**/*" ]
 		}
 	};
