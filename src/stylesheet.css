@@ -1,0 +1,21 @@
+:root {
+	color-scheme: light dark;
+
+	/* Colors */
+	--elev_0: hsl(240, 8%, 10%);
+	--font_color: #eee;
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	color: var(--font_color);
+	font-family: Arial;
+}
+
+body {
+	width: 100vw;
+	height: 100vh;
+	background-color: var(--elev_0);
+}
