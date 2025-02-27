@@ -1,4 +1,9 @@
 /* #region | Main elements */
+@font-face {
+	font-family: "VT323";
+	src: url("media/VT323-Regular.ttf");
+}
+
 :root {
 
 	/* Measurements */
@@ -13,8 +18,8 @@
 	padding: 0;
 	margin: 0;
 	box-sizing: border-box;
-	font-family: monospace;
-	font-size: 1rem;
+	font-family: "VT323";
+	font-size: 1.5rem;
 }
 
 body {
