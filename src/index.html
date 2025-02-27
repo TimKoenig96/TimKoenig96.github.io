@@ -14,6 +14,18 @@
 	<link rel="stylesheet" href="stylesheet.css">
 </head>
 <body>
+	<svg width="0" height="0">
+		<defs>
+			<pattern id="crt_amber" width="4" height="4" patternUnits="userSpaceOnUse">
+				<rect x="0" y="0" width="4" height="4" fill="black" />
+				<rect x="1" y="1" width="3" height="3" fill="white" />
+				<rect x="1" y="2" width="3" height="1" fill="rgba(0, 0, 0, 0.5)" />
+			</pattern>
+		</defs>
+	</svg>
+
+	<svg id="crt_overlay"><rect width="100%" height="100%" fill="url(#crt_amber)" /></svg>
+
 	<div id="header" class="color_invert">
 		<h1 id="navbar_toggle">&gt;</h1>
 		<h1>Tim's Terminal</h1>
