@@ -10,8 +10,8 @@
 	--space_s: .2rem;
 
 	/* Colors */
-	--bg_color: hsl(45, 10%, 10%);
-	--fg_color: hsl(45, 89%, 40%);
+	--bg_color: hsl(41, 45%, 6%);
+	--fg_color: hsl(41, 100%, 40%);
 }
 
 * {
