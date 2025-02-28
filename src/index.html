@@ -16,15 +16,23 @@
 <body>
 	<svg width="0" height="0">
 		<defs>
-			<pattern id="crt_amber" width="4" height="4" patternUnits="userSpaceOnUse">
-				<rect x="0" y="0" width="4" height="4" fill="black" />
-				<rect x="1" y="1" width="3" height="3" fill="white" />
-				<rect x="1" y="2" width="3" height="1" fill="rgba(0, 0, 0, 0.5)" />
+			<pattern id="crt_pixel" width="6" height="6" patternUnits="userSpaceOnUse">
+				<rect x="0" y="0" width="1" height="6" class="fill_bg" />
+				<rect x="1" y="0" width="5" height="1" class="fill_bg" />
+				<rect x="1" y="3" width="5" height="1" class="fill_bg" opacity="0.6" />
 			</pattern>
+
+			<filter id="glow_effect">
+				<feGaussianBlur in="SourceGraphic" stdDeviation="22" result="blurred" />
+				<feMerge>
+					<feMergeNode in="blurred" />
+					<feMergeNode in="SourceGraphic" />
+				</feMerge>
+			</filter>
 		</defs>
 	</svg>
 
-	<svg id="crt_overlay"><rect width="100%" height="100%" fill="url(#crt_amber)" /></svg>
+	<svg id="crt_pixels"><rect width="100%" height="100%" fill="url(#crt_pixel)" /></svg>
 
 	<div id="header">
 		<h1 id="navbar_toggle">&gt;</h1>
