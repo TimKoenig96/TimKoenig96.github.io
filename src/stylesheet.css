@@ -8,10 +8,11 @@
 
 	/* Measurements */
 	--space_s: .4rem;
+	--border: .3rem;
 
 	/* Colors */
 	--bg_color: hsl(41, 90%, 4%);
-	--elevated_color: hsl(41, 100%, 14%);
+	--secondary_color: hsl(41, 100%, 14%);
 	--fg_color: hsl(41, 100%, 50%);
 }
 
@@ -36,10 +37,8 @@ body {
 
 h1 { font-size: 2.5rem; }
 p { font-size: 2rem; }
-/* #endregion */
 
-
-/* #region | Common classes */
+hr { border: calc(var(--border) / 2) solid var(--secondary_color); }
 /* #endregion */
 
 
@@ -90,6 +89,7 @@ p { font-size: 2rem; }
 	flex-direction: column;
 	flex-shrink: 0;
 	padding: var(--space_s);
+	border-right: var(--border) solid var(--secondary_color);
 }
 /* #endregion */
 
