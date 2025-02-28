@@ -10,8 +10,9 @@
 	--space_s: .2rem;
 
 	/* Colors */
-	--bg_color: hsl(41, 45%, 6%);
-	--fg_color: hsl(41, 100%, 40%);
+	--bg_color: hsl(41, 90%, 4%);
+	--elevated_color: hsl(41, 100%, 14%);
+	--fg_color: hsl(41, 100%, 50%);
 }
 
 * {
