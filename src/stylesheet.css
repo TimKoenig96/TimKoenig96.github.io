@@ -39,10 +39,6 @@ p { font-size: 2rem; }
 
 
 /* #region | Common classes */
-.color_invert {
-	background-color: var(--fg_color);
-	color: var(--bg_color);
-}
 /* #endregion */
 
 
@@ -62,6 +58,7 @@ p { font-size: 2rem; }
 #header {
 	display: flex;
 	justify-content: space-between;
+	align-items: center;
 	flex-shrink: 0;
 	padding: var(--space_s);
 }
@@ -72,9 +69,7 @@ p { font-size: 2rem; }
 	text-align: center;
 }
 
-#navbar_toggle.toggled {
-	transform: scaleX(-1);
-}
+#navbar_toggle.toggled { transform: scaleX(-1); }
 /* #endregion */
 
 
@@ -111,7 +106,5 @@ p { font-size: 2rem; }
 
 
 /* #region | Footer */
-#footer {
-	padding: var(--space_s);
-}
+#footer { padding: var(--space_s); }
 /* #endregion */
