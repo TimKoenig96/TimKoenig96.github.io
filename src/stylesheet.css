@@ -39,6 +39,7 @@ body {
 
 h1 { font-size: var(--text_large); }
 p { font-size: var(--text_normal); }
+a { color: var(--fg_color); }
 
 hr { border: calc(var(--border) / 2) solid var(--secondary_color); }
 /* #endregion */
