@@ -9,6 +9,8 @@
 	/* Measurements */
 	--space_s: .4rem;
 	--border: .3rem;
+	--text_large: 2.5rem;
+	--text_normal: 2rem;
 
 	/* Colors */
 	--bg_color: hsl(41, 90%, 4%);
@@ -35,8 +37,8 @@ body {
 	filter: url(#glow_effect);
 }
 
-h1 { font-size: 2.5rem; }
-p { font-size: 2rem; }
+h1 { font-size: var(--text_large); }
+p { font-size: var(--text_normal); }
 
 hr { border: calc(var(--border) / 2) solid var(--secondary_color); }
 /* #endregion */
@@ -66,7 +68,7 @@ hr { border: calc(var(--border) / 2) solid var(--secondary_color); }
 
 #navbar_toggle {
 	cursor: pointer;
-	width: 1.2rem;
+	width: var(--text_large);
 	text-align: center;
 }
 
