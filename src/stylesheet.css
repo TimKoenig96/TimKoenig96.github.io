@@ -31,6 +31,7 @@ body {
 	overflow: hidden;
 	background-color: var(--bg_color);
 	color: var(--fg_color);
+	filter: url(#glow_effect);
 }
 
 h1 { font-size: 2.5rem; }
@@ -42,14 +43,21 @@ p { font-size: 2rem; }
 /* #endregion */
 
 
-/* #region | Misc */
-#crt_overlay {
+/* #region | CRT effects */
+#crt_pixels {
 	position: absolute;
 	width: 100%;
 	height: 100%;
 	pointer-events: none;
-	opacity: 0.3;
-	mix-blend-mode: multiply;
+	opacity: .5;
+}
+
+#crt_pixel > .fill_bg { fill: var(--bg_color); }
+
+#glow_svg {
+	position: absolute;
+	width: 0;
+	height: 0;
 }
 /* #endregion */
 
