@@ -53,12 +53,6 @@ p { font-size: 2rem; }
 }
 
 #crt_pixel > .fill_bg { fill: var(--bg_color); }
-
-#glow_svg {
-	position: absolute;
-	width: 0;
-	height: 0;
-}
 /* #endregion */
 
 
