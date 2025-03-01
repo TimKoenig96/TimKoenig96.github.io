@@ -22,7 +22,8 @@ export default (_, { mode }) => {
 				scriptLoading: "module",
 				minify: {
 					removeRedundantAttributes: false,
-					collapseWhitespace: isProd
+					collapseWhitespace: isProd,
+					removeComments: isProd
 				}
 			}),
 
