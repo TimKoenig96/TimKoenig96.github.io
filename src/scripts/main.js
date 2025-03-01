@@ -1,9 +1,9 @@
-import { updateDateTime } from "./datetime.js";
+import { startDateTimeUpdater } from "./datetime.js";
 
 function init() {
 
 	// Update date and time
-	updateDateTime();
+	startDateTimeUpdater();
 }
 
 document.addEventListener("DOMContentLoaded", init);
