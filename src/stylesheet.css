@@ -34,7 +34,7 @@ body {
 	overflow: hidden;
 	background-color: var(--bg_color);
 	color: var(--fg_color);
-	filter: url(#glow_effect);
+	filter: url(#crt_glow);
 }
 
 h1 { font-size: var(--text_large); }
