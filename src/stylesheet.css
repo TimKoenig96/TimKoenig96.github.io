@@ -33,8 +33,9 @@ body {
 	overflow: hidden;
 	background-color: var(--bg_color);
 	color: var(--fg_color);
-	line-height: 2em;
 	filter: url(#crt_glow);
+	line-height: 1em;
+	font-size: var(--text_normal);
 }
 
 h1 { font-size: var(--text_large); }
