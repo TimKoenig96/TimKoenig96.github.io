@@ -47,6 +47,12 @@ hr { border: calc(var(--border) / 2) solid var(--secondary_color); }
 
 
 /* #region | CRT effects */
+#crt_defs {
+	position: absolute;
+	width: 0;
+	height: 0;
+}
+
 #crt_pixels {
 	position: absolute;
 	width: 100%;
