@@ -24,6 +24,8 @@
 	font-family: "VT323";
 }
 
+*::selection { background-color: #297f80; }
+
 body {
 	display: flex;
 	flex-direction: column;
