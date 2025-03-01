@@ -40,7 +40,7 @@ export default (_, { mode }) => {
 			isProd && new CssMinimizerPlugin()
 		].filter(Boolean),
 
-		devtool: isProd && "eval-source-map",
+		devtool: !isProd && "eval-source-map",
 
 		optimization: {
 			minimize: isProd
