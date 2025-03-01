@@ -24,9 +24,20 @@
 			</pattern>
 
 			<filter id="crt_glow">
-				<feGaussianBlur in="SourceGraphic" stdDeviation="9" result="blurred" />
+				<feGaussianBlur in="SourceGraphic" stdDeviation="100" result="large_bloom" />
+				<feGaussianBlur in="SourceGraphic" stdDeviation="6" result="small_bloom" />
+
+				<feComponentTransfer in="large_bloom" result="large_bloom_adjusted">
+					<feFuncA type="linear" slope=".7" />
+				</feComponentTransfer>
+
+				<feComponentTransfer in="small_bloom" result="small_bloom_adjusted">
+					<feFuncA type="linear" slope=".7" />
+				</feComponentTransfer>
+
 				<feMerge>
-					<feMergeNode in="blurred" />
+					<feMergeNode in="large_bloom_adjusted" />
+					<feMergeNode in="small_bloom_adjusted" />
 					<feMergeNode in="SourceGraphic" />
 				</feMerge>
 			</filter>
