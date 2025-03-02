@@ -23,6 +23,7 @@
 	margin: 0;
 	box-sizing: border-box;
 	font-family: "VT323";
+	scrollbar-color: var(--fg_color) transparent;
 }
 
 *::selection { background-color: #297f80; }
