@@ -29,6 +29,11 @@
 *::selection { background-color: #297f80; }
 
 body {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	width: 100vw;
+	height: 100dvh;
 	background-color: var(--bg_color);
 	color: var(--fg_color);
 	line-height: 1em;
@@ -41,35 +46,6 @@ a { color: var(--fg_color); }
 hr { border: calc(var(--border) / 2) solid var(--secondary_color); }
 
 ul > li { list-style-type: square; }
-/* #endregion */
-
-
-/* #region | CRT effects */
-#crt_defs {
-	position: absolute;
-	width: 0;
-	height: 0;
-}
-
-#crt_pixels {
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	pointer-events: none;
-	opacity: .5;
-	z-index: 5;
-}
-
-#crt_pixel > .fill_bg { fill: var(--bg_color); }
-
-#crt_bloom {
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	width: 100vw;
-	height: 100vh;
-	filter: url(#crt_bloom);
-}
 /* #endregion */
 
 
