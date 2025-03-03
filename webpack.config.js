@@ -15,6 +15,13 @@ export default (_, { mode }) => {
 			clean: true
 		},
 
+		module: {
+			rules: [{
+				test: /\.(vert|frag)$/,
+				type: "asset/source"
+			}]
+		},
+
 		plugins: [
 			new HtmlWebpackPlugin({
 				template: "./src/index.html",
@@ -32,7 +39,7 @@ export default (_, { mode }) => {
 					from: "./src",
 					noErrorOnMissing: true,
 					globOptions: {
-						ignore: [ "**/*.html", "**/*.js" ]
+						ignore: [ "**/*.html", "**/*.js", "**/shaders" ]
 					}
 				}]
 			}),
