@@ -1,5 +1,5 @@
 import { startDateTimeUpdater } from "./datetime.js";
-import { setupNavbarToggle } from "./navbarToggler.js";
+import { setupNavbarToggle } from "./navbar_toggler.js";
 import { generateTimeline } from "./timeline.js";
 
 function init() {
