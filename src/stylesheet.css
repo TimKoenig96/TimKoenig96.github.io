@@ -16,6 +16,7 @@
 
 	--text_large: 2.5rem;
 	--text_normal: 2rem;
+	--text_small: 1.4rem;
 
 	/* Colors */
 	--bg_color: hsl(41, 90%, 4%);
@@ -71,6 +72,13 @@ ul > li { list-style-type: square; }
 	flex-shrink: 0;
 	background-color: var(--secondary_color);
 	box-shadow: 0 0 var(--secondary_glow_range) 0 var(--secondary_color_glow);
+}
+
+.smalltext {
+	font-size: var(--text_small);
+	line-height: 1em;
+	color: var(--secondary_color);
+	text-shadow: 0 0 var(--secondary_glow_range) var(--secondary_color_glow);
 }
 /* #endregion */
 
