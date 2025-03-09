@@ -34,11 +34,12 @@
 	scrollbar-color: var(--fg_color) transparent;
 }
 
-/* *::selection { background-color: #297f80; } */
 *::selection {
 	color: var(--bg_color);
 	background-color: var(--fg_color);
 }
+
+html { overflow: hidden; }
 
 body {
 	display: flex;
@@ -51,6 +52,31 @@ body {
 	line-height: 1em;
 	font-size: var(--text_normal);
 	text-shadow: 0 0 var(--fg_glow_range) var(--fg_color_glow);
+}
+
+body::before, body::after {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100dvh;
+	z-index: 9;
+	pointer-events: none;
+}
+
+body::before {
+	background: linear-gradient(#0004 0%, #0000 15%, #0000 85%, #0004 100%);
+	background-size: .4rem .4rem;
+	mix-blend-mode: overlay;
+}
+
+body::after {
+	height: 10rem;
+	background: linear-gradient(#0000, #fff 1rem, #fff 9rem, #0000 10rem);
+	opacity: .1;
+	mix-blend-mode: soft-light;
+	animation: crt_scan 15s linear infinite;
 }
 
 h1 { font-size: var(--text_large); }
@@ -239,5 +265,13 @@ ul > li { list-style-type: square; }
 
 	/* Hide content when navbar toggled */
 	.nav_toggled .content_container { display: none; }
+}
+/* #endregion */
+
+
+/* #region | Keyframe animations */
+@keyframes crt_scan {
+	from { top: -10rem; }
+	to { top: 100dvh; }
 }
 /* #endregion */
