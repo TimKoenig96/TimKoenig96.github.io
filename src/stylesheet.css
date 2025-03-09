@@ -84,7 +84,7 @@ ul > li { list-style-type: square; }
 
 
 /* #region | Header */
-#header {
+.header {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -103,7 +103,7 @@ ul > li { list-style-type: square; }
 
 
 /* #region | Main container */
-#main {
+.main {
 	display: flex;
 	min-height: 0;
 	flex-grow: 1;
@@ -112,7 +112,7 @@ ul > li { list-style-type: square; }
 
 
 /* #region | Navbar */
-#navbar {
+.navbar {
 	display: flex;
 	flex-direction: column;
 	flex-shrink: 0;
@@ -120,9 +120,9 @@ ul > li { list-style-type: square; }
 	overflow-y: auto;
 }
 
-.nav_toggled #navbar { display: none; }
+.nav_toggled .navbar { display: none; }
 
-#navbar > .button {
+.navbar > .button {
 	margin: var(--space_s);
 	padding: var(--space_s);
 	cursor: pointer;
@@ -130,17 +130,17 @@ ul > li { list-style-type: square; }
 	box-shadow: 0 0 var(--secondary_glow_range) 0 var(--secondary_color_glow);
 }
 
-#navbar > .button > p::before {
+.navbar > .button > p::before {
 	content: "  ";
 	white-space: pre;
 }
 
-#navbar > .button.active > p::before { content: "> "; }
+.navbar > .button.active > p::before { content: "> "; }
 /* #endregion */
 
 
 /* #region | Content */
-#content_container {
+.content_container {
 	flex-grow: 1;
 }
 
@@ -155,7 +155,7 @@ ul > li { list-style-type: square; }
 	margin: var(--space_s) 0;
 }
 
-#timeline_container {
+.timeline_container {
 	display: flex;
 	gap: var(--space_s);
 	margin-top: 2rem;
@@ -216,7 +216,7 @@ ul > li { list-style-type: square; }
 
 
 /* #region | Footer */
-#footer { padding: var(--space_s); }
+.footer { padding: var(--space_s); }
 /* #endregion */
 
 
@@ -225,19 +225,19 @@ ul > li { list-style-type: square; }
 
 	/* Hide navbar by default */
 	#navbar_toggle { transform: scaleX(-1); }
-	#navbar { display: none; }
+	.navbar { display: none; }
 
 	/* Hide navbar/content vertical rule */
-	#main > .vr { display: none; }
+	.main > .vr { display: none; }
 
 	/* Show navbar when toggled */
 	.nav_toggled #navbar_toggle { transform: none; }
-	.nav_toggled #navbar {
+	.nav_toggled .navbar {
 		display: flex;
 		width: 100vw;
 	}
 
 	/* Hide content when navbar toggled */
-	.nav_toggled #content_container { display: none; }
+	.nav_toggled .content_container { display: none; }
 }
 /* #endregion */
