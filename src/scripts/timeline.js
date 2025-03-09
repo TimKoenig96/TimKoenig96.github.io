@@ -1,5 +1,5 @@
 const MS_PER_DAY = 86400000;
-const REM_PER_DAY = 0.015;
+const REM_PER_DAY = 0.017;
 const YEAR_REM_OFFSET = -1.12;
 const CURRENT_DATE = new Date();
 
@@ -131,13 +131,9 @@ function createAllEvents() {
 		eventElement.classList.add("timeline_event");
 		eventElement.style.bottom = `${daysDelta * REM_PER_DAY}rem`;
 
-		// Create and configure timeline label
-		const eventLabel = document.createElement("p");
-		eventLabel.textContent = event.label;
-
 		// Create and configure duration indicator
-		const durationIndicator = document.createElement("div");
-		durationIndicator.classList.add("timeline_event_duration");
+		const eventDuration = document.createElement("div");
+		eventDuration.classList.add("timeline_event_duration");
 
 		// Calculate event duration if an end was specified
 		if (event.end) {
@@ -150,12 +146,22 @@ function createAllEvents() {
 			const duration = Math.ceil((eventEnd - eventStart) / MS_PER_DAY) + 1;
 
 			// Set duration indicator height
-			durationIndicator.style.height = `${duration * REM_PER_DAY}rem`;
+			eventDuration.style.height = `${duration * REM_PER_DAY}rem`;
 		}
 
+		// Create and configure event underline
+		const eventUnderline = document.createElement("div");
+		eventUnderline.classList.add("timeline_event_underline");
+
+		// Create and configure timeline label
+		const eventLabel = document.createElement("p");
+		eventLabel.classList.add("timeline_event_label");
+		eventLabel.textContent = event.label;
+
 		// Append elements to their parents
+		eventElement.appendChild(eventDuration);
+		eventElement.appendChild(eventUnderline);
 		eventElement.appendChild(eventLabel);
-		eventElement.appendChild(durationIndicator);
 		document.getElementById("timeline_events").appendChild(eventElement);
 	});
 }
