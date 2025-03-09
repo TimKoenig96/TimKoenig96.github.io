@@ -16,7 +16,9 @@
 	/* Colors */
 	--bg_color: hsl(41, 90%, 4%);
 	--secondary_color: hsl(41, 100%, 14%);
+	--secondary_color_glow: hsla(41, 100%, 14%, 0.8);
 	--fg_color: hsl(41, 100%, 50%);
+	--fg_color_glow: hsla(41, 100%, 50%, 0.6);
 }
 
 * {
@@ -26,7 +28,11 @@
 	scrollbar-color: var(--fg_color) transparent;
 }
 
-*::selection { background-color: #297f80; }
+/* *::selection { background-color: #297f80; } */
+*::selection {
+	color: var(--bg_color);
+	background-color: var(--fg_color);
+}
 
 body {
 	display: flex;
@@ -38,14 +44,29 @@ body {
 	color: var(--fg_color);
 	line-height: 1em;
 	font-size: var(--text_normal);
+	text-shadow: 0 0 var(--space_s) var(--fg_color_glow);
 }
 
 h1 { font-size: var(--text_large); }
 a { color: var(--fg_color); }
 
-hr { border: calc(var(--border) / 2) solid var(--secondary_color); }
+hr {
+	border: none;
+	border-bottom: var(--border) solid var(--secondary_color);
+	box-shadow: 0 0 var(--space_s) 0 var(--secondary_color_glow);
+}
 
 ul > li { list-style-type: square; }
+/* #endregion */
+
+
+/* #region | Misc classes */
+.vr {
+	width: var(--border);
+	flex-shrink: 0;
+	background-color: var(--secondary_color);
+	box-shadow: 0 0 var(--space_s) 0 var(--secondary_color_glow);
+}
 /* #endregion */
 
 
@@ -83,7 +104,6 @@ ul > li { list-style-type: square; }
 	flex-direction: column;
 	flex-shrink: 0;
 	padding: var(--space_s);
-	border-right: var(--border) solid var(--secondary_color);
 	overflow-y: auto;
 }
 
@@ -94,6 +114,7 @@ ul > li { list-style-type: square; }
 	padding: var(--space_s);
 	cursor: pointer;
 	background-color: var(--secondary_color);
+	box-shadow: 0 0 var(--space_s) 0 var(--secondary_color_glow);
 }
 
 #navbar > .button > p::before {
@@ -107,15 +128,12 @@ ul > li { list-style-type: square; }
 
 /* #region | Content */
 #content_container {
-	display: flex;
-	margin: calc(var(--space_s) * 2);
 	flex-grow: 1;
 }
 
-
-
 .content {
-	flex: 1;
+	padding: var(--space_s);
+	height: 100%;
 	overflow: auto;
 }
 
@@ -148,12 +166,14 @@ ul > li { list-style-type: square; }
 	position: absolute;
 	box-shadow: inset 0 calc(var(--border) * -1) 0 var(--secondary_color);
 	color: var(--secondary_color);
+	text-shadow: 0 0 var(--space_s) var(--secondary_color_glow);
 	z-index: 0;
 }
 
 .timeline_event:hover {
 	box-shadow: inset 0 calc(var(--border) * -1) 0 var(--fg_color);
 	color: var(--fg_color);
+	text-shadow: 0 0 var(--space_s) var(--fg_color_glow);
 	z-index: 1;
 }
 
