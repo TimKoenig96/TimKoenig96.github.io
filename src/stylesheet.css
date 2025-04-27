@@ -136,6 +136,10 @@ ul > li { list-style-type: square; }
 	min-height: 0;
 	flex-grow: 1;
 }
+
+.nav_toggled .main > .vr {
+	display: none;
+}
 /* #endregion */
 
 
