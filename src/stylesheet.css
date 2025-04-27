@@ -251,7 +251,7 @@ ul > li { list-style-type: square; }
 
 
 /* #region | Responsive layout */
-@media (max-aspect-ratio: .9) {
+@media screen and (max-width: 40rem) {
 
 	/* Hide navbar by default */
 	#navbar_toggle { transform: scaleX(-1); }
