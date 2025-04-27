@@ -75,7 +75,19 @@ const events = [
 		end: [2025, 12, 3],
 		label: "Career change program - Application developer",
 		description: "Taking part in a 2-year-long career change program to become an IT specialist specializing in application development, certified by the Chamber of Commerce and Industry."
-	}
+	},
+	{
+		start: [2025, 3, 26],
+		end: [2025, 9, 17],
+		label: "Internship at GSWE GmbH (1/2)",
+		description: "Web development using PHP/Symfony."
+	},
+	// {
+	// 	start: [2025, 10, 10],
+	// 	end: [2025, 11, 18],
+	// 	label: "Internship at GSWE GmbH (2/2)",
+	// 	description: "Web development using PHP/Symfony."
+	// }
 ];
 
 export function generateTimeline() {
