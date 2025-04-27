@@ -176,7 +176,7 @@ ul > li { list-style-type: square; }
 
 .content {
 	display: none;
-	padding: var(--space_s);
+	padding: var(--space_m);
 	height: 100%;
 	overflow: auto;
 }
