@@ -142,6 +142,7 @@ function createAllEvents() {
 		const eventElement = document.createElement("div");
 		eventElement.classList.add("timeline_event");
 		eventElement.style.bottom = `${daysDelta * REM_PER_DAY}rem`;
+		if (event.description) eventElement.title = event.description;
 
 		// Create and configure duration indicator
 		const eventDuration = document.createElement("div");
